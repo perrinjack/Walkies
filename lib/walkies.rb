@@ -10,8 +10,9 @@ def ten_minute_walk?(route)
   end
 end
 
+# counts the relevant units travelled in the direction stipulated
 def direction_count(route, dir)
-  west = route.select { |n|  n == dir }.count
+  return route.select { |n|  n == dir }.count 
 end
 
 
