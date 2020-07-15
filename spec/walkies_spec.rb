@@ -8,18 +8,20 @@ describe 'ten_minute_walk?' do
   end
 
   it 'returns array of just x direction coordinates' do
-    expect(eastArray(['e','w', 's'])).to eq 1
+    expect(eastArray(%w[e w s])).to eq 1
   end
 
   it 'returns true when y direction coordinates ' do
-    expect(northArray(['n','s','e', 'n','n','e'])).to eq 3
+    expect(northArray(%w[n s e n n e])).to eq 3
   end
 
   it 'returns array of just x direction coordinates' do
-    expect(westArray(['e','w', 's'])).to eq 1
+    expect(westArray(%w[e w s])).to eq 1
   end
 
   it 'returns array of just y direction coordinates ' do
-    expect(southArray(['n','s','e', 's', 's'])).to eq 3
+    expect(southArray(%w[n s e s s])).to eq 3
   end
+
+  
 end
