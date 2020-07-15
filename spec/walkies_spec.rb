@@ -12,6 +12,11 @@ describe 'ten_minute_walk?' do
   end
 
   it 'returns true when x direction coordinates sum to 0' do
-    expect(northArray(['n','s','e'])).to eq %w[n s]
+    expect(northArray(['n','s','e'])).to eq ['n', 's']
   end
+
+  it 'returns array of just x direction coordinates' do
+    expect(westArray(['e','w', 's'])).to eq %w[e w ]
+  end
+
 end
