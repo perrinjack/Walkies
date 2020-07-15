@@ -2,21 +2,21 @@
 
 def ten_minute_walk?(route)
   return false if route.length > 10
-  return true if (westArray(route) == eastArray(route)) && (southArray(route) == northArray(route))
+  return true if (west_count(route) == east_count(route)) && (south_count(route) == north_count(route))
 end
 
-def westArray(route)
-  west = route.select { |n|  n == 'w' }.count('w')
+def west_count(route)
+  west = route.select { |n|  n == 'w' }.count
 end
 
-def eastArray(route)
-  east = route.select { |n|  n == 'e' }.count('e')
+def east_count(route)
+  east = route.select { |n|  n == 'e' }.count
 end
 
-def northArray(route)
-  route.select { |n| n == 'n' }.count('n')
+def north_count(route)
+  route.select { |n| n == 'n' }.count
 end
 
-def southArray(route)
-  route.select { |n| n == 's' }.count('s')
+def south_count(route)
+  route.select { |n| n == 's' }.count
 end
