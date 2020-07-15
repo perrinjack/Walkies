@@ -6,20 +6,20 @@ def ten_minute_walk?(route)
 end
 
 def westArray(route)
-    west = route.select{ |n| ( n == 'e' || n == 'w' )}
+    west = route.select{ |n| ( n == 'e' || n == 'w' )}.count('w')
 end
 
 def eastArray(route)
-    east = route.select{ |n| ( n == 'e' || n == 'w' )}
+    east = route.select{ |n| ( n == 'e' || n == 'w' )}.count('e')
     
 end
 
 def northArray(route)
-    return route.select{ |n| ( n == 'n' || n == 's' )}
+    return route.select{ |n| ( n == 'n' || n == 's' )}.count('n')
 end
 
 def southArray(route)
-    return route.select{ |n| ( n == 'n' || n == 's' )}
+    return route.select{ |n| ( n == 'n' || n == 's' )}.count('s')
 end
 
 
