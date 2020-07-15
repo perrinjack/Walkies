@@ -18,4 +18,8 @@ def northArray(route)
     return route.select{ |n| ( n == 'n' || n == 's' )}
 end
 
+def southArray(route)
+    return route.select{ |n| ( n == 'n' || n == 's' )}
+end
+
 
