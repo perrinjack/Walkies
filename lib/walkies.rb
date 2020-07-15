@@ -18,3 +18,4 @@ def northArray(route)
     return route.select{ |n| ( n == 'n' || n == 's' )}
 end
 
+
