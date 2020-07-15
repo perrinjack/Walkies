@@ -5,6 +5,7 @@ def ten_minute_walk?(route)
 
   if (west_count(route) == east_count(route)) && (south_count(route) == north_count(route))
     true
+    
   end
 end
 
