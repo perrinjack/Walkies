@@ -8,6 +8,6 @@ describe 'ten_minute_walk?' do
   end
 
   it 'returns true when x direction coordinates sum to 0' do
-    expect(ten_minute_walk?(['e','w'])).to eq true
+    expect(ten_minute_walk?(%w[e w])).to eq %w[e w]
   end
 end
