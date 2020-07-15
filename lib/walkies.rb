@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 def ten_minute_walk?(route)
-  if route.length > 10
-    return false 
-  else 
-    return true
-  end
+    return false  if route.length > 10
+   
+return route.select{ |n| ( n == 'e' || n == 'w' )}
 end
