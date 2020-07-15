@@ -24,6 +24,6 @@ describe 'ten_minute_walk?' do
   end
 
   it 'returns true when walk returns to his spot in 10 minutes' do
-    expect(ten_minute_walk?(%w[w s e e n n e s w w ])).to eq true
+    expect(ten_minute_walk?(%w[w s e e n n e s w w])).to eq true
   end
 end
