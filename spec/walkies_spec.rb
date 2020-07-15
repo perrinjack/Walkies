@@ -8,19 +8,19 @@ describe 'ten_minute_walk?' do
   end
 
   it 'returns array of just x direction coordinates' do
-    expect(east_count(%w[e w s])).to eq 1
+    expect(direction_count(%w[e w s], 'e')).to eq 1      
   end
 
   it 'returns true when y direction coordinates ' do
-    expect(north_count(%w[n s e n n e])).to eq 3
+    expect(direction_count(%w[n s e n n e], 'n')).to eq 3
   end
 
   it 'returns array of just x direction coordinates' do
-    expect(west_count(%w[e w s])).to eq 1
+    expect(direction_count(%w[e w s], 'w')).to eq 1   
   end
 
   it 'returns array of just y direction coordinates ' do
-    expect(south_count(%w[n s e s s])).to eq 3
+    expect(direction_count(%w[n s e s s],'s')).to eq 3
   end
 
   it 'returns true when walk returns to his spot in 10 minutes' do

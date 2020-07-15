@@ -3,25 +3,15 @@
 def ten_minute_walk?(route)
   return false if route.length > 10
 
-  if (west_count(route) == east_count(route)) && (south_count(route) == north_count(route))
+  if (direction_count(route, 'w') == direction_count(route, 'e')) && (direction_count(route, 's') == direction_count(route, 'n'))
     true
   else
     false
   end
 end
 
-def west_count(route)
-  west = route.select { |n|  n == 'w' }.count
+def direction_count(route, dir)
+  west = route.select { |n|  n == dir }.count
 end
 
-def east_count(route)
-  east = route.select { |n|  n == 'e' }.count
-end
 
-def north_count(route)
-  route.select { |n| n == 'n' }.count
-end
-
-def south_count(route)
-  route.select { |n| n == 's' }.count
-end
