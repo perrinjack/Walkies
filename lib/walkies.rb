@@ -3,7 +3,7 @@
 def ten_minute_walk?(route)
   return false if route.length > 10
 
-  if (direction_count(route, 'w') == direction_count(route, 'e')) && (direction_count(route, 's') == direction_count(route, 'n'))
+  if (dir_count(route, 'w') == dir_count(route, 'e')) && (dir_count(route, 's') == dir_count(route, 'n'))
     true
   else
     false
@@ -11,8 +11,8 @@ def ten_minute_walk?(route)
 end
 
 # counts the relevant units travelled in the direction stipulated
-def direction_count(route, dir)
-  return route.select { |n|  n == dir }.count 
+def dir_count(route, dir)
+  return route.count(dir)
 end
 
 
