@@ -2,6 +2,7 @@
 
 def ten_minute_walk?(route)
   return false if route.length > 10
+  return true if (westArray(route) == eastArray(route)) && (southArray(route) == northArray(route))
 end
 
 def westArray(route)
