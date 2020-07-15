@@ -3,16 +3,20 @@
 def ten_minute_walk?(route)
   return false if route.length > 10
 
-  if (dir_count(route, 'w') == dir_count(route, 'e')) && (dir_count(route, 's') == dir_count(route, 'n'))
-    true
-  else
-    false
-  end
+  (horizontal_back?(route) && vertical_back?(route))
 end
 
 # counts the relevant units travelled in the direction stipulated
 def dir_count(route, dir)
-  return route.count(dir)
+  route.count(dir)
 end
 
+private
 
+def horizontal_back?(route)
+  (dir_count(route, 'w') == dir_count(route, 'e'))
+end
+
+def vertical_back?(route)
+  (dir_count(route, 's') == dir_count(route, 'n'))
+end
