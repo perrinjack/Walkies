@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
 def ten_minute_walk?(route)
-  return false if route.length > 10
+  if route.length > 10
+    return false 
+  else 
+    return true
+  end
 end
